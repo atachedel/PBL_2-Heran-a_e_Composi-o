@@ -3,10 +3,14 @@ public class Pessoa{
     private String matricula;
     private String email;
 
-    public Pessoa (String nome, String matricula, String email){
+    private Endereco endereco;
+
+    public Pessoa (String nome, String matricula, String email, Endereco Endereco){
         this.nome=nome;
         this.matricula=matricula;
         this.email=email;
+
+        this.endereco=endereco;
     }
 
     //getters
@@ -26,6 +30,9 @@ public class Pessoa{
                             "Nome: "+this.getNome()+
                             "\nMatricula: "+this.getMatricula()+
                             "\nEmail: "+this.getEmail()+
+                            "\nRua: "+this.endereco.getRua()+
+                            "\nNumero: "+this.endereco.getNumero()+
+                            "\nCidade: "+this.endereco.getCidade()+
                             "\n_______________________________________ ");
     }
 }
