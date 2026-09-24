@@ -22,8 +22,10 @@ public class Pessoa{
 
     //exibição de dados
     public void exibirDados(){
-        System.out.println("Nome: "+this.getNome()+
+        System.out.println("________________________________________\n"+
+                            "Nome: "+this.getNome()+
                             "\nMatricula: "+this.getMatricula()+
-                            "\nEmail: "+this.getEmail());
+                            "\nEmail: "+this.getEmail()+
+                            "\n_______________________________________ ");
     }
 }
