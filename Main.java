@@ -40,6 +40,10 @@ public class Main {
 
     aluno.exibirDados();   
     professor.exibirDados();   
-    funcionario.exibirDados();   
+    funcionario.exibirDados(); 
+    
+    aluno.solicitarMatricula();
+    professor.registrarNota();
+    funcionario.realizarAtendimento();  
     }
 }

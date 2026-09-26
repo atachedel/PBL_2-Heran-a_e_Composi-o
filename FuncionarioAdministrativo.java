@@ -8,6 +8,11 @@ public class FuncionarioAdministrativo extends Pessoa{
     }
 
     public void realizarAtendimento(){
-        System.out.println(this.getNome()+" iniciou um atendimento.");
+        System.out.println("\n" + this.getNome()+" iniciou um atendimento.");
     }
+        @Override 
+     public void exibirDados(){
+     super.exibirDados();
+     System.out.println("Setor: " + this.setor + "\n________________________________________");
+     }
 }

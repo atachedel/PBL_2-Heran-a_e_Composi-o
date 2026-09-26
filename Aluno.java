@@ -5,6 +5,12 @@ public class Aluno extends Pessoa {
         this.curso=curso;
     }
     public void solicitarMatricula(){
-        System.out.println(this.getNome()+" solicitou uma matrícula");
+        System.out.println("\n" + this.getNome()+" solicitou uma matrícula");
     }
+
+    @Override 
+     public void exibirDados(){
+     super.exibirDados();
+     System.out.println("Curso: " + this.curso + "\n________________________________________");
+     }
 }

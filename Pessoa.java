@@ -5,13 +5,23 @@ public class Pessoa{
 
     private Endereco endereco;
 
-    public Pessoa (String nome, String matricula, String email, Endereco Endereco){
+    public Pessoa (String nome, String matricula, String email, Endereco endereco){
         this.nome=nome;
         this.matricula=matricula;
         this.email=email;
 
         this.endereco=endereco;
     }
+        public Pessoa (String nome, String matricula, String email){
+        this.nome=nome;
+        this.matricula=matricula;
+        this.email=email;
+        }
+
+        public void receberEndereco(Endereco enderecoNovo){
+            this.endereco = enderecoNovo;
+        }
+
 
     //getters
     public String getNome(){
@@ -32,7 +42,6 @@ public class Pessoa{
                             "\nEmail: "+this.getEmail()+
                             "\nRua: "+this.endereco.getRua()+
                             "\nNumero: "+this.endereco.getNumero()+
-                            "\nCidade: "+this.endereco.getCidade()+
-                            "\n_______________________________________ ");
+                            "\nCidade: "+this.endereco.getCidade());
     }
 }
