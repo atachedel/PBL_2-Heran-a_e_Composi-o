@@ -3,11 +3,25 @@ public class Pessoa{
     private String matricula;
     private String email;
 
-    public Pessoa (String nome, String matricula, String email){
+    private Endereco endereco;
+
+    public Pessoa (String nome, String matricula, String email, Endereco endereco){
         this.nome=nome;
         this.matricula=matricula;
         this.email=email;
+
+        this.endereco=endereco;
     }
+        public Pessoa (String nome, String matricula, String email){
+        this.nome=nome;
+        this.matricula=matricula;
+        this.email=email;
+        }
+
+        public void receberEndereco(Endereco enderecoNovo){
+            this.endereco = enderecoNovo;
+        }
+
 
     //getters
     public String getNome(){
@@ -26,6 +40,8 @@ public class Pessoa{
                             "Nome: "+this.getNome()+
                             "\nMatricula: "+this.getMatricula()+
                             "\nEmail: "+this.getEmail()+
-                            "\n_______________________________________ ");
+                            "\nRua: "+this.endereco.getRua()+
+                            "\nNumero: "+this.endereco.getNumero()+
+                            "\nCidade: "+this.endereco.getCidade());
     }
 }

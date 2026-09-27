@@ -1,10 +1,16 @@
 public class Aluno extends Pessoa {
     private String curso;
-    public Aluno(String curso, String nome, String matricula, String email){
-        super(nome, matricula, email);
+    public Aluno(String curso, String nome, String matricula, String email, Endereco endereco){
+        super(nome, matricula, email, endereco);
         this.curso=curso;
     }
     public void solicitarMatricula(){
-        System.out.println(this.getNome()+" solicitou uma matrícula");
+        System.out.println("\n" + this.getNome()+" solicitou uma matrícula");
     }
+
+    @Override 
+     public void exibirDados(){
+     super.exibirDados();
+     System.out.println("Curso: " + this.curso + "\n________________________________________");
+     }
 }
