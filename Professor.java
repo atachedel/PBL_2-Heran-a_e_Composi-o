@@ -11,7 +11,7 @@ public class Professor extends Pessoa{
 
     @Override 
     public void chamada(int aula){
-        System.out.println("\nO professor " +this.getNome() + " distribuiu uma chamada com " + aula + " alunos! ");
+        System.out.println("\nO professor " +this.getNome() + " distribuiu a chamada da" + aula+"ª aula.");
     }
 
         @Override 

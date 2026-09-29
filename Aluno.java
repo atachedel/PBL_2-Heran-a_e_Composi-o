@@ -10,7 +10,7 @@ public class Aluno extends Pessoa {
 
     @Override
     public void chamada(int aula){
-        System.out.println("\nO aluno " + this.getNome() + " assinou uma lista com " + aula + " alunos ");
+        System.out.println("\nO aluno " + this.getNome() + " assinou a lista de chamada da " + aula + "ª aula.");
     }
 
     @Override 
