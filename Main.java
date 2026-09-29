@@ -7,7 +7,7 @@ public class Main {
         );
     Aluno aluno = new Aluno(
         "Ciências da Computação",
-         "Gabriel Souza",
+         "Gabriel Souza Lord Linux",
           "CSa01",
            "gabriel@a.unileste.edu.br",
            enderecoAluno);
@@ -45,5 +45,9 @@ public class Main {
     aluno.solicitarMatricula();
     professor.registrarNota();
     funcionario.realizarAtendimento();  
+
+    professor.chamada(60);
+    aluno.chamada(60);
+    funcionario.chamada(60);
     }
 }
