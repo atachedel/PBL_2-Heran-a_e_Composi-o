@@ -1,4 +1,4 @@
-public class Pessoa{
+public abstract class Pessoa{
     private String nome;
     private String matricula;
     private String email;
@@ -22,6 +22,7 @@ public class Pessoa{
             this.endereco = enderecoNovo;
         }
 
+        public abstract void chamada(int aula);  //Método abstrato
 
     //getters
     public String getNome(){

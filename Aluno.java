@@ -8,6 +8,11 @@ public class Aluno extends Pessoa {
         System.out.println("\n" + this.getNome()+" solicitou uma matrícula");
     }
 
+    @Override
+    public void chamada(int aula){
+        System.out.println("\nO aluno " + this.getNome() + " assinou uma lista com " + aula + " alunos ");
+    }
+
     @Override 
      public void exibirDados(){
      super.exibirDados();
