@@ -1,5 +1,10 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
+    
+    ArrayList<Pessoa> pessoas = new ArrayList();
+
     Endereco enderecoAluno = new Endereco(
         "Rua Orquidea",
          "67",
@@ -38,16 +43,27 @@ public class Main {
             enderecoFuncionario
         );
 
-    aluno.exibirDados();   
-    professor.exibirDados();   
-    funcionario.exibirDados(); 
-    
-    aluno.solicitarMatricula();
-    professor.registrarNota();
-    funcionario.realizarAtendimento();  
+        pessoas.add(aluno);
+        pessoas.add(professor);
+        pessoas.add(funcionario);
 
-    professor.chamada(60);
-    aluno.chamada(60);
-    funcionario.chamada(60);
+        for(Pessoa pessoa : pessoas){
+            pessoa.exibirDados();
+        }
+
+        for(Pessoa pessoa : pessoas){
+            pessoa.chamada(60);
+        }
+    // aluno.exibirDados();   
+    // professor.exibirDados();   
+    // funcionario.exibirDados(); 
+    
+    // aluno.solicitarMatricula();
+    // professor.registrarNota();
+    // funcionario.realizarAtendimento();  
+
+    // professor.chamada(60);
+    // aluno.chamada(60);
+    // funcionario.chamada(60);
     }
 }

@@ -11,12 +11,12 @@ public class Professor extends Pessoa{
 
     @Override 
     public void chamada(int aula){
-        System.out.println("\nO professor " +this.getNome() + " distribuiu a chamada da" + aula+"ª aula.");
+        System.out.println("\nO professor " +this.getNome() + " distribuiu a chamada da " + aula+"ª aula.");
     }
 
         @Override 
      public void exibirDados(){
-     //super.exibirDados();
+     super.exibirDados();
      System.out.println("Area: " + this.area + "\n________________________________________");
      }
 }

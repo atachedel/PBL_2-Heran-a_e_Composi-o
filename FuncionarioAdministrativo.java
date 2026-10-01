@@ -11,7 +11,7 @@ public class FuncionarioAdministrativo extends Pessoa{
         System.out.println("\n" + this.getNome()+" iniciou um atendimento.");
     }
     public void chamada(int aula){
-        System.out.println("O "+this.getNome()+" lançou a chamada da aula "+ aula +" no sistema.");
+        System.out.println("\n"+this.getNome()+" lançou a chamada da "+ aula +"ª aula  no sistema.");
     }
         @Override 
      public void exibirDados(){
