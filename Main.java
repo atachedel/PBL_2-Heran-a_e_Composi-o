@@ -54,6 +54,10 @@ public class Main {
         for(Pessoa pessoa : pessoas){
             pessoa.chamada(60);
         }
+
+        professor.enviarnotificacao();
+        aluno.enviarnotificacao();
+        funcionario.enviarnotificacao();
     // aluno.exibirDados();   
     // professor.exibirDados();   
     // funcionario.exibirDados(); 

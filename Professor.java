@@ -1,4 +1,4 @@
-public class Professor extends Pessoa{
+public class Professor extends Pessoa implements Notificavel{
     private String area;
 
     public Professor(String nome, String matricula, String email, String area, Endereco endereco){
@@ -12,6 +12,11 @@ public class Professor extends Pessoa{
     @Override 
     public void chamada(int aula){
         System.out.println("\nO professor " +this.getNome() + " distribuiu a chamada da " + aula+"ª aula.");
+    }
+
+    @Override
+    public void enviarnotificacao(){
+        System.out.println("\nO Professor " + this.getNome() + " deu um push em zap zap zap ");
     }
 
         @Override 

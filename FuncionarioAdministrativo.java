@@ -1,4 +1,4 @@
-public class FuncionarioAdministrativo extends Pessoa{
+public class FuncionarioAdministrativo extends Pessoa implements Notificavel{
     private String setor;
     
     //construtor
@@ -13,6 +13,12 @@ public class FuncionarioAdministrativo extends Pessoa{
     public void chamada(int aula){
         System.out.println("\n"+this.getNome()+" lançou a chamada da "+ aula +"ª aula  no sistema.");
     }
+
+        @Override
+    public void enviarnotificacao(){
+        System.out.println("\nO Funcionario " + this.getNome() + " mandou um zap zap");
+    }
+
         @Override 
      public void exibirDados(){
      super.exibirDados();

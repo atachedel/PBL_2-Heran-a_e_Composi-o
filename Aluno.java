@@ -1,4 +1,4 @@
-public class Aluno extends Pessoa {
+public class Aluno extends Pessoa implements Notificavel {
     private String curso;
     public Aluno(String curso, String nome, String matricula, String email, Endereco endereco){
         super(nome, matricula, email, endereco);
@@ -6,6 +6,10 @@ public class Aluno extends Pessoa {
     }
     public void solicitarMatricula(){
         System.out.println("\n" + this.getNome()+" solicitou uma matrícula");
+    }
+    @Override
+    public void enviarnotificacao(){
+        System.out.println("\nO Aluno " + this.getNome() + " mandou um zap! ");
     }
 
     @Override
