@@ -43,9 +43,23 @@ public class Main {
             enderecoFuncionario
         );
 
+        Endereco enderecoPesquisador = new Endereco(
+        "Rua Orquidea",
+         "67",
+          "Ipatinga"
+        );
+    Pesquisador pesquisador = new Pesquisador(
+        "Andre: a teoria de tudo",
+        "TnmD000",
+         "Andre@a.unileste.edu.br",
+          "RH",
+           enderecoPesquisador);
+
+
         pessoas.add(aluno);
         pessoas.add(professor);
         pessoas.add(funcionario);
+        pessoas.add(pesquisador);
 
         for(Pessoa pessoa : pessoas){
             pessoa.exibirDados();
