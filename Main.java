@@ -44,12 +44,13 @@ public class Main {
         );
 
         Endereco enderecoPesquisador = new Endereco(
-        "Rua Orquidea",
-         "67",
-          "Ipatinga"
+        "Rua do medo",
+         "13",
+          "Cidade de Deus"
         );
+
     Pesquisador pesquisador = new Pesquisador(
-        "Andre: a teoria de tudo",
+        "Andre, o teorico",
         "TnmD000",
          "Andre@a.unileste.edu.br",
           "RH",
@@ -72,16 +73,5 @@ public class Main {
         professor.enviarnotificacao();
         aluno.enviarnotificacao();
         funcionario.enviarnotificacao();
-    // aluno.exibirDados();   
-    // professor.exibirDados();   
-    // funcionario.exibirDados(); 
-    
-    // aluno.solicitarMatricula();
-    // professor.registrarNota();
-    // funcionario.realizarAtendimento();  
-
-    // professor.chamada(60);
-    // aluno.chamada(60);
-    // funcionario.chamada(60);
     }
 }
