@@ -8,9 +8,9 @@ public class Professor extends Pessoa implements Notificavel{
     public void registrarNota(){
         System.out.println("\n" + this.getNome()+" registrou uma nota.");
     }
-
-    @Override 
+    @Override
     public void chamada(int aula){
+        validarAula(aula);
         System.out.println("\nO professor " +this.getNome() + " distribuiu a chamada da " + aula+"ª aula.");
     }
 
@@ -19,7 +19,7 @@ public class Professor extends Pessoa implements Notificavel{
         System.out.println("\nO Professor " + this.getNome() + " deu um push em zap zap zap ");
     }
 
-        @Override 
+        @Override
      public void exibirDados(){
      super.exibirDados();
      System.out.println("Area: " + this.area + "\n________________________________________");

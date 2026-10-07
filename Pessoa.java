@@ -6,15 +6,22 @@ public abstract class Pessoa {
     private Endereco endereco;
 
     public Pessoa(String nome, String matricula, String email, Endereco endereco) {
+        validarNome(nome);
+        validarMatricula(matricula);
+        validarEmail(email);
+
         this.nome = nome;
         this.matricula = matricula;
         this.email = email;
 
         this.endereco = endereco;
     }
-
     //Overload
     public Pessoa(String nome, String matricula, String email) {
+        validarNome(nome);
+        validarMatricula(matricula);
+        validarEmail(email);
+
         this.nome = nome;
         this.matricula = matricula;
         this.email = email;
@@ -25,6 +32,34 @@ public abstract class Pessoa {
         this.endereco = enderecoNovo;
     }
 
+    //validacao do nome
+    private void validarNome(String nome) {
+        if (nome == null || nome.trim().isEmpty()) {
+            throw new IllegalArgumentException("O nome nao pode estar vazio.");
+        }
+    }
+
+    //validacao da matricula
+    private void validarMatricula(String matricula) {
+        if (matricula == null || matricula.trim().isEmpty()) {
+            throw new IllegalArgumentException("A matricula nao pode estar vazia.");
+        }
+    }
+
+    //validacao do email
+    private void validarEmail(String email) {
+        if (email == null || !email.contains("@") || !email.contains(".")) {
+            throw new IllegalArgumentException("O email informado e invalido.");
+        }
+    }
+
+    //validacao do numero da aula
+    protected void validarAula(int aula) {
+        if (aula <= 0) {
+            throw new IllegalArgumentException("O numero da aula deve ser maior que zero.");
+        }
+    }
+
     //abstract method
     public abstract void chamada(int aula);
 
@@ -32,7 +67,6 @@ public abstract class Pessoa {
     public String getNome() {
         return this.nome;
     }
-
     public String getMatricula() {
         return this.matricula;
     }
@@ -40,7 +74,6 @@ public abstract class Pessoa {
     public String getEmail() {
         return this.email;
     }
-
     // exibição de dados
     public void exibirDados() {
         System.out.println("________________________________________\n" +
