@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Pessoa> pessoas = new ArrayList();
+        ArrayList<Pessoa> pessoas = new ArrayList<>();
 
         Endereco enderecoAluno = new Endereco(
                 "Rua Orquidea",
@@ -17,7 +17,7 @@ public class Main {
                 "CSa01",
                 "gabriel@a.unileste.edu.br",
                 enderecoAluno,
-                14);
+                13);
         Endereco enderecoProfessor = new Endereco(
                 "rua Sanchez",
                 "137-c",
@@ -86,6 +86,7 @@ public class Main {
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
         }
+        entrada.close();
     }
 
     public static void testarValidacoes() {
