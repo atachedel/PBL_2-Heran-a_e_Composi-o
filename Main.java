@@ -16,8 +16,8 @@ public class Main {
                 "Gabriel Souza Lord Linux",
                 "CSa01",
                 "gabriel@a.unileste.edu.br",
-                enderecoAluno,
-                13);
+                enderecoAluno, 
+                3);
         Endereco enderecoProfessor = new Endereco(
                 "rua Sanchez",
                 "137-c",
@@ -65,8 +65,6 @@ public class Main {
         aluno.enviarnotificacao();
         funcionario.enviarnotificacao();
 
-        testarValidacoes();
-
     }
 
     public static void testarChamada(ArrayList<Pessoa> pessoas) {
@@ -87,56 +85,5 @@ public class Main {
             System.out.println(e.getMessage());
         }
         entrada.close();
-    }
-
-    public static void testarValidacoes() {
-
-        System.out.println("\n--- Testes das validacoes ---");
-
-        try {
-            new Aluno(
-                    "Ciências da Computação",
-                    "",
-                    "CSa02",
-                    "aluno@a.unileste.edu.br",
-                    new Endereco("Rua A", "10", "Ipatinga"),
-                    12.3);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Nome invalido: " + e.getMessage());
-        }
-
-        try {
-            new Professor(
-                    "Professor Teste",
-                    "",
-                    "professor@p.unileste.edu.br",
-                    "Computação",
-                    new Endereco("Rua B", "20", "Ipatinga"));
-        } catch (IllegalArgumentException e) {
-            System.out.println("Matricula invalida: " + e.getMessage());
-        }
-
-        try {
-            new Pesquisador(
-                    "Pesquisador Teste",
-                    "Pes01",
-                    "email-invalido",
-                    "Pesquisa",
-                    new Endereco("Rua C", "30", "Ipatinga"));
-        } catch (IllegalArgumentException e) {
-            System.out.println("Email invalido: " + e.getMessage());
-        }
-
-        try {
-            new Aluno(
-                    "Aluno Teste",
-                    "Aluno Teste",
-                    "Alu01",
-                    "aluno@a.unileste.edu.br",
-                    new Endereco("Rua D", "40", "Ipatinga"),
-                    9).chamada(0);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Aula invalida: " + e.getMessage());
-        }
     }
 }

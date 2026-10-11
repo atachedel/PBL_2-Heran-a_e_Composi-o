@@ -5,7 +5,8 @@ public class Aluno extends Pessoa implements Notificavel {
     public Aluno(String curso, String nome, String matricula, String email, Endereco endereco, double nota){
         super(nome, matricula, email, endereco);
         this.curso = curso;
-        this.nota = nota;}
+        this.setNota(nota);    
+    }
     
     public void solicitarMatricula(){
 
@@ -35,12 +36,16 @@ public class Aluno extends Pessoa implements Notificavel {
     public void exibirDados(){
 
         super.exibirDados();
+        System.out.println("Nota: " + this.nota);
         System.out.println("Curso: " + this.curso + "\n________________________________________");
-
+        
     }
-
     public void setNota(double nota){
-        this.nota = nota;
+        if (nota <= 0 || nota > 10) {
+            throw new IllegalArgumentException("Nota inválida. A nota deve estar entre 0 e 10.");
+        }
+        else{
+            this.nota = nota;
+        }
     }
-
 }
